@@ -9,4 +9,4 @@ const insertDoc = async function(indexName,_id,mappintType,data) {
         body:data
     });
 }
-module.exports = insertDoc;
+module.exports = insertDoc; 

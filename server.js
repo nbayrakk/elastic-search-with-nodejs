@@ -7,9 +7,9 @@ elasticClient.ping({
     requestTimeout: 1000
 }, async function (error) {
     if (error) {
-        console.trace('Elasticsearch\'e erişilmiyor!');
+        console.trace('Elasticsearch not running!');
     } else {
-        console.log('Elasticsearch ayakta :)');
+        console.log('Elasticsearch running ');
 
         try {
             //Create Index 
@@ -84,7 +84,7 @@ elasticClient.ping({
                 }
             }
             const resSearch2 = await elasticSearch('games', 'categorystore', body2)
-            console.log(resSearch2.aggregations.tags.buckets)
+            
         } catch (e) {
             console.log(e)
         }
